@@ -25,3 +25,4 @@ class Node {
         return this.value;
     }
 }
+module.exports=Node;

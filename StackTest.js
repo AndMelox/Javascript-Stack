@@ -1,3 +1,4 @@
+const Stack = require('./Stack');
 class StackTest {
     static runTests() {
         const stack = new Stack();

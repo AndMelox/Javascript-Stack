@@ -1,3 +1,4 @@
+const Node = require('./Node');
 class Stack {
     constructor() {
         this.head = null;
@@ -12,7 +13,9 @@ class Stack {
             this.head = node;
         }
     }
-
+    size() {
+        return this._size;
+    }
     pop() {
         if (this.head === null) {
             return null;
@@ -43,3 +46,4 @@ class Stack {
         return str;
     }
 }
+module.exports=Stack;
