@@ -1,3 +1,9 @@
+if (typeof require !== 'undefined') {
+    var Stack = require('./Stack');
+} else {
+    var Stack = window.Stack;
+}
+
 const stack = new Stack();
 
 function pushToStack() {
@@ -11,13 +17,13 @@ function pushToStack() {
 
 function popFromStack() {
     const poppedValue = stack.pop();
-    alert(poppedValue !== null ? `Popped: ${poppedValue}` : 'Stack is empty');
+    alert(poppedValue !== "Underflow" ? `Popped: ${poppedValue}` : 'Stack is empty');
     updateStackOutput();
 }
 
 function peekStack() {
     const peekValue = stack.peek();
-    alert(peekValue !== null ? `Peek: ${peekValue}` : 'Stack is empty');
+    alert(peekValue !== "No elements in stack" ? `Peek: ${peekValue}` : 'Stack is empty');
 }
 
 function checkIfEmpty() {
