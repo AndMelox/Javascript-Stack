@@ -15,7 +15,7 @@ class Stack {
 
     pop() {
         if (this.head === null) {
-            return "No elements in Stack";
+            return null;
         }
         let value = this.head.getValue();
         this.head = this.head.getNext();
@@ -24,12 +24,22 @@ class Stack {
 
     peek() {
         if (this.head === null) {
-            return "No elements in Stack";
+            return null;
         }
         return this.head.getValue();
     }
 
     isEmpty() {
         return this.head === null;
+    }
+
+    toString() {
+        let current = this.head;
+        let str = '';
+        while (current !== null) {
+            str += current.getValue() + ' ';
+            current = current.getNext();
+        }
+        return str;
     }
 }

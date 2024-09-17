@@ -1,7 +1,7 @@
 class StackTest {
     static runTests() {
         const stack = new Stack();
-        
+
         console.log("Test: push and size");
         stack.push(10);
         stack.push(20);
@@ -17,6 +17,7 @@ class StackTest {
 
         console.log("Test: isEmpty");
         console.log(stack.isEmpty() ? "Passed" : "Failed");
+        console.log(stack.toString());
     }
 }
 
