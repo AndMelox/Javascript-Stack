@@ -2,23 +2,28 @@ class Stack {
     constructor() {
         this.head = null;
     }
-
+    
     push(element) {
         let node = new Node(element);
         if (this.head === null) {
             this.head = node;
         } else {
+            this.head.setPrev(node);
             node.setNext(this.head);
             this.head = node;
         }
     }
 
+    //pop() usando el set next y prev
     pop() {
         if (this.head === null) {
             return null;
         }
         let value = this.head.getValue();
         this.head = this.head.getNext();
+        if (this.head !== null) {
+            this.head.setPrev(null);
+        }
         return value;
     }
 
