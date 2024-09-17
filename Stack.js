@@ -14,7 +14,6 @@ class Stack {
         }
     }
 
-    //pop() usando el set next y prev
     pop() {
         if (this.head === null) {
             return null;
