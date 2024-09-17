@@ -32,23 +32,23 @@ Para ejecutar las pruebas en la consola utilizando Node.js, sigue estos pasos:
     node StackTest.js
    
 Esto ejecutará el script de prueba y mostrará los resultados en la consola. La salida esperada es la siguiente:
-Test: push and size
-Stack after pushing 10: 10
-Stack after pushing 20: 20 10
-Stack after pushing 5: 5 20 10
-Stack after pushing 100: 100 5 20 10
-Stack after pushing 1: 1 100 5 20 10
-Stack after pushing 50: 50 1 100 5 20 10
-Stack after pushing 200: 200 50 1 100 5 20 10
-Passed: size is 7
-Test: peek
-Passed: top element is 200
-Test: pop
-Stack after popping: 50 1 100 5 20 10
-Passed: popped 200
-Test: isEmpty
-Passed: stack is not empty
-Final stack contents: 50 1 100 5 20 10
+-Test: push and size
+-Stack after pushing 10: 10
+-Stack after pushing 20: 20 10
+-Stack after pushing 5: 5 20 10
+-Stack after pushing 100: 100 5 20 10
+-Stack after pushing 1: 1 100 5 20 10
+-Stack after pushing 50: 50 1 100 5 20 10
+-Stack after pushing 200: 200 50 1 100 5 20 10
+-Passed: size is 7
+-Test: peek
+-Passed: top element is 200
+-Test: pop
+-Stack after popping: 50 1 100 5 20 10
+-Passed: popped 200
+-Test: isEmpty
+-Passed: stack is not empty
+-Final stack contents: 50 1 100 5 20 10
 
 ## Ejecución de Pruebas en HTML
 
