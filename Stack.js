@@ -1,7 +1,9 @@
 const Node = require('./Node');
+
 class Stack {
     constructor() {
         this.head = null;
+        this._size = 0;
     }
 
     push(element) {
@@ -12,22 +14,26 @@ class Stack {
             node.setNext(this.head);
             this.head = node;
         }
+        this._size++;
     }
+
     size() {
         return this._size;
     }
+
     pop() {
         if (this.head === null) {
-            return null;
+            return "Underflow";
         }
         let value = this.head.getValue();
         this.head = this.head.getNext();
+        this._size--;
         return value;
     }
 
     peek() {
         if (this.head === null) {
-            return null;
+            return "No elements in stack";
         }
         return this.head.getValue();
     }
@@ -43,7 +49,8 @@ class Stack {
             str += current.getValue() + ' ';
             current = current.getNext();
         }
-        return str;
+        return str.trim();
     }
 }
-module.exports=Stack;
+
+module.exports = Stack;
