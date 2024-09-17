@@ -2,7 +2,7 @@ class Stack {
     constructor() {
         this.head = null;
     }
-    
+
     push(element) {
         let node = new Node(element);
         if (this.head === null) {
