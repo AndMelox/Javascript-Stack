@@ -8,7 +8,6 @@ class Stack {
         if (this.head === null) {
             this.head = node;
         } else {
-            this.head.setPrev(node);
             node.setNext(this.head);
             this.head = node;
         }
@@ -20,9 +19,6 @@ class Stack {
         }
         let value = this.head.getValue();
         this.head = this.head.getNext();
-        if (this.head !== null) {
-            this.head.setPrev(null);
-        }
         return value;
     }
 
