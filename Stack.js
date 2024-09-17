@@ -1,31 +1,35 @@
 class Stack {
     constructor() {
-        this.items = [];
+        this.head = null;
     }
 
     push(element) {
-        this.items.push(element);
+        let node = new Node(element);
+        if (this.head === null) {
+            this.head = node;
+        } else {
+            node.setNext(this.head);
+            this.head = node;
+        }
     }
 
     pop() {
-        if (this.isEmpty()) {
-            return "Underflow";
+        if (this.head === null) {
+            return "No elements in Stack";
         }
-        return this.items.pop();
+        let value = this.head.getValue();
+        this.head = this.head.getNext();
+        return value;
     }
 
     peek() {
-        if (this.isEmpty()) {
+        if (this.head === null) {
             return "No elements in Stack";
         }
-        return this.items[this.items.length - 1];
+        return this.head.getValue();
     }
 
     isEmpty() {
-        return this.items.length === 0;
-    }
-
-    size() {
-        return this.items.length;
+        return this.head === null;
     }
 }
